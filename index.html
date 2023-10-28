@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Gallery</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div>
+          <h1 class="headline">My Youtube Gallery</h1>
+          <p>
+            Keep track of the valuable videos you wanna watch later , paste the
+            id into the box and add it up !
+          </p>
+        </div>
+        <form>
+          <label for="videoId">Video ID</label>
+          <input
+            type="text"
+            name="videoId"
+            id="videoId"
+            placeholder="rEa99-NQ9Bk"
+          />
+          <button onclick="saveVideo(event)">Save The Video !</button>
+        </form>
+      </div>
+      <ul id="videosContainer"></ul>
+    </div>
+    <div id="popup" onclick="handlePopupClick()" class="closed">
+      <iframe
+        width="560"
+        height="315"
+        frame-border="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
